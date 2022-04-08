@@ -9,9 +9,9 @@ import logging
 
 logging.basicConfig(filename='./error_log.log',level=logging.ERROR)
 
-access = "aKAtqWr3x7zVqNKDPjMSTSjMG6n7lg94oCBcQq9B"
-secret = "a8CzgMs1w0exaPexR2oyYpyv9VmBTOXIwkToAM0Z"
-myToken = "xoxb-3097585058695-3131449132721-qwXwdx09C7gxsuEwjnGG978G"
+access = ""
+secret = ""
+myToken = ""
 
 Coin_list = ['KRW-ETH','KRW-KNC','KRW-BORA']
 
