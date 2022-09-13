@@ -135,11 +135,11 @@ while True:
             #매수
             if target_price < current_price and current_price < predicted_close_price:
                 krw = get_balance("KRW")  #현재 잔고
-                if krw >= krw_total * 2/3:
-                    if krw > 5000 : #최소 거래 금액
-                        upbit.buy_market_order("KRW-ETH", krw*1/3)
-                        ordered_price['KRW-ETH'] = current_price
-                        post_message(myToken,"#upbit_auto", "KRW-ETH" + " bought ")
+#                 if krw >= krw_total * 2/3:
+                if krw > 5000 : #최소 거래 금액
+                    upbit.buy_market_order("KRW-ETH", krw)
+                    ordered_price['KRW-ETH'] = current_price
+                    post_message(myToken,"#upbit_auto", "KRW-ETH" + " bought ")
             #상승조건 매도
             if 0 < ordered_price['KRW-ETH'] * 1.20 < current_price :
                 upbit.sell_market_order("KRW-ETH", coin_balance*0.9995)
